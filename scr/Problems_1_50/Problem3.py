@@ -31,4 +31,3 @@ class Problem3:
         return True
 
 print(Problem3().largestPrimeFactor(600851475143))
-print(Problem3().isPrimeNumber(6))

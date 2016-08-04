@@ -6,16 +6,32 @@ __author__ = 'pawel'
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
 class Problem4:
-    def largestPalindrome(self, palindromesArray):
-        maxPalindrome =
-        for palindrome in palindromesArray:
 
-    def getAllPalindromes(self, charsArray, length):
+    def largestPalindrome(self):
+        return Problem4().maximum(Problem4().palindromes())
 
+    def palindromes(self):
+        list = []
+        for x in range(999, 0, -1):
+            for y in range(999, 0, -1):
+                number = x * y
+                if Problem4().isPalindrome(str(number)):
+                    list.append(number)
+                    break
+        return list
+
+    def isPalindrome(self, word):
+        reverseWord = word[::-1]
+        if word == reverseWord:
+            return True
+        else:
+            return False
 
     def maximum(self, numbersArray):
         max = 0
-        for x in range (0, numbersArray.Count):
-            if numbersArray[x] > max:
-                max = numbersArray[x]
+        for x in numbersArray:
+            if x > max:
+                max = x
         return max
+
+print("Largest palindrome is: {0}".format(Problem4().largestPalindrome()))
