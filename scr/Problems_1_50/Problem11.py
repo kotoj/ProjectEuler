@@ -27,3 +27,21 @@
 #
 # What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
+def maxProductOfAdjacentNumbers(numbersGrid, numberOfAdjacents):
+    matrix = {}
+    for i in range(0,10):
+        for j in range(0,10):
+            i = j
+
+    with open('Problem11DataGrid') as f:
+        myLines = f.readlines()
+
+    for line in myLines:
+        for word in line.split():
+            print(word)
+
+maxProductOfAdjacentNumbers('asd', 'asd')
+
+
+
+
